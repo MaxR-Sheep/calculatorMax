@@ -101,7 +101,7 @@ html {
 
 body {
   align-items: center;
-  background-image: linear-gradient(236deg, #74ebd5, #acb6e5);
+  background-image: linear-gradient(236deg, #74ebd5, #66f06b);
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -166,7 +166,7 @@ body {
 }
 
 .key--equal {
-  background-image: linear-gradient(to bottom, #fe886a, #ff7033);
+  background-image: linear-gradient(to bottom, #ff3402, #ff7033);
   grid-column: -2;
   grid-row: 2 / span 4;
 }
