@@ -1,8 +1,8 @@
-const calculator = document.querySelector(calculator);
-const keys = calculator.getElementById(calculator__keys);
+const calculator = document.querySelector(".calculator");
+const keys = calculator.querySelector(".calculator__keys");
 
-keys.addEventListener(click, (event) => {
-  if (event.target.matches(button)) {
+keys.addEventListener("click", (event) => {
+  if (event.target.matches("button")) {
     const key = event.target;
     const action = key.dataset.action;
     if (!action) {
