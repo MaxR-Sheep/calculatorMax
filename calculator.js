@@ -1,63 +1,17 @@
-const calculator = document.querySelector(".calculator");
-const keys = calculator.querySelector(".calculator__keys");
+function forclear() {
+  document.getElementById("output").innerHTML = "0";
+}
 
-keys.addEventListener("click", (event) => {
-  if (event.target.matches("button")) {
-    const key = event.target;
-    const action = key.dataset.action;
-    const keyContent = key.textContent;
-    const displayedNum = display.textContent;
-    const previousKeyType = calculator.dataset.previousKeyType;
-
-    if (!action) {
-      if (displayedNum === "0" || previousKeyType === "operator") {
-        display.textContent = keyContent;
-      } else {
-        display.textContent = displayedNum + keyContent;
-      }
-    }
-    if (
-      action === "add" ||
-      action === "subtract" ||
-      action === "multiply" ||
-      action === "divide"
-    ) {
-      calculator.dataset.previousKeyType = "operator";
-    }
-    Array.from(key.parentNode.children).forEach((k) =>
-      k.classList.remove("is-depressed")
-    );
-    if (action === "decimal") {
-      display.textContent = displayedNum + ".";
-    }
-
-    if (action === "clear") {
-      calculator.dataset.previousKeyType = "clear";
-    }
-
-    if (action === "calculate") {
-      const firstValue = calculator.dataset.firstValue;
-      const operator = calculator.dataset.operator;
-      const secondValue = displayedNum;
-
-      display.textContent = calculate(firstValue, operator, secondValue);
-      const calculate = (n1, operator, n2) => {
-        let result = "";
-
-        if (operator === "add") {
-          result = parseFloat(n1) + parseFloat(n2);
-        } else if (operator === "subtract") {
-          result = parseFloat(n1) - parseFloat(n2);
-        } else if (operator === "multiply") {
-          result = parseFloat(n1) * parseFloat(n2);
-        } else if (operator === "divide") {
-          result = parseFloat(n1) / parseFloat(n2);
-        }
-
-        return result;
-      };
-    }
+function removeZero() {
+  var value = document.getElementById("output").innerHTML;
+  if (value == "0") {
+    value = " ";
+    document.getElementById("output").innerHTML = value;
   }
-});
+}
 
-const display = document.querySelector(".calculator__display");
+function perc() {
+  var value = document.getElementById("output").innerHTML;
+  value = value / 100;
+  document.getElementById("output").innerHTML = value;
+}

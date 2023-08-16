@@ -3,34 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="style.css" type="text/css">
 
     <title>Calculator Max</title>
   </head>
   <body>
     <div class="container">
       <p>Welcome for calculatorMax</p>
-      <div class="calculator">
-        <div class="calculator__display">0</div>
-
-        <div class="calculator__keys">
-          <button class="key--operator" data-action="add">+</button>
-          <button class="key--operator" data-action="subtract">-</button>
-          <button class="key--operator" data-action="multiply">&times;</button>
-          <button class="key--operator" data-action="divide">÷</button>
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>0</button>
-          <button data-action="decimal">.</button>
-          <button data-action="clear">AC</button>
-          <button class="key--equal" data-action="calculate">=</button>
+      <p id="output">0</p>
+<div class="first-row">
+   <button id="r1-1" onclick="forclear()">C</button>
+   <button id="r1-3" onclick="perc()">%</button>
+   <button id="r1-4">/</button>
+</div>
+<div class="second-row">
+   <button id="r2-1" >7</button>
+   <button id="r2-2" >8</button>
+   <button id="r2-3" >9</button>
+   <button id="r2-4" >X</button>
+</div>
+<div class="third-row">
+   <button id="r3-1" >4</button>
+   <button id="r3-2" >5</button>
+   <button id="r3-3" >6</button>
+   <button id="r3-4" >-</button>
+</div>
+<div class="fourth-row">
+   <button id="r4-1"  >1</button>
+   <button id="r4-2"  >2</button>
+   <button id="r4-3"  >3</button>
+   <button id="r4-4"  >+</button>
+</div>
+<div class="fifth-row">
+  <button id="r5-1" >0</button>
+  <button id="r5-2" >.</button>
+  <button id="r5-3" >=</button>
+</div>
         </div>
       </div>
     </div>
