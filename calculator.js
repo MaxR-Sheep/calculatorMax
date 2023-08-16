@@ -15,3 +15,15 @@ function perc() {
   value = value / 100;
   document.getElementById("output").innerHTML = value;
 }
+
+function fordisplay(value) {
+  removeZero();
+  document.getElementById("output").innerHTML += value;
+}
+
+function solve() {
+  removeZero();
+  var equation = document.getElementById("output").innerHTML;
+  var solved = eval(equation);
+  document.getElementById("output").innerHTML = solved;
+}
