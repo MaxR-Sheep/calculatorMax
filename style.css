@@ -1,26 +1,39 @@
 .display {
-  background-color: rgb(201, 201, 201);
+  background-color: rgb(151, 49, 49);
   padding: 15px;
-  width: 250px;
-  text-align: right;
+  width: 96%;
+  text-align: center;
   font-size: 20px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 20px;
 }
 
+#text {
+  color: aliceblue;
+}
 button {
-  padding: 10px;
-  width: 67px;
   height: 45px;
+  width: 20%;
   margin-top: 10px;
-  background-color: rgb(194, 194, 194);
+  background-color: rgb(51, 134, 205);
   color: black;
   font-size: 20px;
+  border-radius: 20px;
+}
+
+#output {
+  width: 100%;
+  border: 2px #c7bb19 solid;
+  background-color: #ffeed9;
+  text-align: center;
+
+  height: 45px;
+  font-size: 40px;
+  border-radius: 20px;
 }
 
 #r1-1,
 #r5-1 {
-  width: 138px;
+  width: 42%;
 }
 
 button:hover {
@@ -29,4 +42,18 @@ button:hover {
 }
 button:active {
   background-color: rgb(136, 136, 136);
+}
+
+.row {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .display {
+    width: 92%;
+    height: 620px;
+  }
+  #calcul {
+    margin-top: 25%;
+  }
 }
