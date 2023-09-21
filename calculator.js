@@ -1,29 +1,24 @@
-function forclear() {
-  document.getElementById("output").innerHTML = "0";
-}
+const display = document.querySelector(".display");
+const button = document.querySelectorAll("button");
+const spcChars = ["%", "*", "/", "-", "+", "="];
 
-function removeZero() {
-  var value = document.getElementById("output").innerHTML;
-  if (value == "0") {
-    value = " ";
-    document.getElementById("output").innerHTML = value;
+let output = "";
+
+const calculate = (btnValue) => {
+  display.focus();
+  if (btnValue === "=" && output !== "") {
+    output = eval(output.replace("%", "/100"));
+  } else if (btnValue === "AC") {
+    output = "";
+  } else if (btnValue === "DEL") {
+    output = output.toString().slice(0, -1);
+  } else {
+    if (output === "" && spcChars.includes(btnValue)) return;
+    output += btnValue;
   }
-}
+  display.value = output;
+};
 
-function perc() {
-  var value = document.getElementById("output").innerHTML;
-  value = value / 100;
-  document.getElementById("output").innerHTML = value;
-}
-
-function fordisplay(value) {
-  removeZero();
-  document.getElementById("output").innerHTML += value;
-}
-
-function solve() {
-  removeZero();
-  var equation = document.getElementById("output").innerHTML;
-  var solved = eval(equation);
-  document.getElementById("output").innerHTML = solved;
-}
+button.forEach((button) => {
+  button.addEventListener("click", (ev) => calculate(ev.target.dataset.value));
+});

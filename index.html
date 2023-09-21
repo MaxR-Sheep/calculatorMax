@@ -3,44 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css" />
 
     <title>Calculator Max</title>
   </head>
   <body>
-    <div class="display">
-      <p id="text">Welcome for calculatorMax</p>
-      <div id="output">0</div>
-      <div id="calcul">
-<div class="row">
-   <button id="r1-1" onclick="forclear()">C</button>
-   <button id="r1-3" onclick="perc()">%</button>
-   <button id="r1-4"onclick="fordisplay('/')">/</button>
-</div>
-<div class="row">
-   <button id="r2-1" onclick="fordisplay('7')">7</button>
-   <button id="r2-2" onclick="fordisplay('8')">8</button>
-   <button id="r2-3" onclick="fordisplay('9')">9</button>
-   <button id="r2-4" onclick="fordisplay('*')">X</button>
-</div>
-<div class="row">
-   <button id="r3-1" onclick="fordisplay('4')">4</button>
-   <button id="r3-2" onclick="fordisplay('5')">5</button>
-   <button id="r3-3" onclick="fordisplay('6')">6</button>
-   <button id="r3-4" onclick="fordisplay('-')">-</button>
-</div>
-<div class="row">
-   <button id="r4-1" onclick="fordisplay('1')" >1</button>
-   <button id="r4-2" onclick="fordisplay('2')" >2</button>
-   <button id="r4-3" onclick="fordisplay('3')" >3</button>
-   <button id="r4-4" onclick="fordisplay('+')" >+</button>
-</div>
-<div class="row">
-  <button id="r5-1" onclick="fordisplay('0')" >0</button>
-  <button id="r5-2" onclick="fordisplay('.')" >.</button>
-  <button id="r5-3" onclick="solve()" >=</button>
-</div>
-</div>
+    <div id="title">
+      <h1>Calulator Max</h1>
+
+      <div class="container">
+        <input type="text" class="display" />
+        <div class="buttons">
+          <button class="operat" data-value="AC">AC</button>
+          <button class="operat" data-value="DEL">DEL</button>
+          <button class="operat" data-value="%">%</button>
+          <button class="operat" data-value="/">/</button>
+
+          <button data-value="7">7</button>
+          <button data-value="8">8</button>
+          <button data-value="9">9</button>
+          <button class="operat" data-value="*">*</button>
+
+          <button data-value="4">4</button>
+          <button data-value="5">5</button>
+          <button data-value="6">6</button>
+          <button class="operat" data-value="-">-</button>
+
+          <button data-value="1">1</button>
+          <button data-value="2">2</button>
+          <button data-value="3">3</button>
+          <button class="operat" data-value="+">+</button>
+
+          <button data-value="0">0</button>
+          <button data-value="00">00</button>
+          <button data-value=".">.</button>
+          <button class="operat" data-value="=">=</button>
         </div>
       </div>
     </div>
